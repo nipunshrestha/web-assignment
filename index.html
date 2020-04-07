@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Citizen Science</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="style.css" type="text/css">
+  </head>
+  <body>
+
+    <header>
+      <div id="logo"></div>
+      <nav>
+          <ul>
+              <li><a href="/">Home</a></li>
+              <li><a href="/about">About</a></li>
+              <li><a href="/map">Map</a></li>
+              <li><a href="/partners">Our Partners</a></li>
+          </ul>
+      </nav>
+      <form id="search-form" action='/search'>
+        <div class="form-input">
+          <label for="search-input">Search:</label>
+          <input id="search-input" name="search">
+        </div>
+        <button id="search-button">Go</button>
+      </form>
+    </header>
+
+    <div id="content">
+
+      <div id="heading">
+          
+          <hgroup>
+              <h1>Citizen Science</h1>
+              <h2>Understanding Our Trees</h2>
+          </hgroup>
+
+          <p>Although you may think that most Australian trees are Eucalypts, in fact there
+          are a wide variety of species native to this continent. The goal of this project
+          is to help understand the diversity of the population of trees and their
+          distribution across Australia. Citizen Scientists can help by recording observations
+          of trees via the website.
+          </p>
+          <figure>
+              <img src="tree.png" alt="A Tree">
+              <figcaption>A Magnificent Tree 
+                <span class="attribution">(Source: <a href="https://www.needpix.com/photo/download/218476/eucalyptus-australia-outback-tree-gum-tree-landscape-aussie-nature-outdoors">Needpix.com</a>)</span>
+              </figcaption>
+          </figure>
+      </div>
+
+      <div id="whatis">
+          <h2>What is Citizen Science?</h2>
+
+          <p>Citizen science involves public participation and collaboration 
+          in scientific research with the aim to increase scientific knowledge. 
+          It’s a great way to harness community skills and passion to fuel the 
+          capacity of science to answer our questions about the world and how it 
+          works. Have a look at our 
+          <a href="https://citizenscience.org.au/10-principles-of-citizen-science/">10 
+          Principles of Citizen Science</a> to find out more.</p>
+
+          <p>To be involved in citizen science you don’t need a science degree. 
+          Citizen scientists work with scientists or the scientific framework 
+          to achieve scientific goals.</p>
+
+          <p class="attribution">Text from <a href="https://citizenscience.org.au/who-we-are/">citizenscience.org.au</a></p>
+
+      </div> 
+
+      <div id="registration">
+          <h2>Sign Up!</h2>
+
+          <p>Sign up to become a Citizen Scientist and contribute to the project.</p>
+          
+          <form id="registration-form" action="/register" method="POST">
+
+            <div class="form-input">
+              <label for="username-input">Username</label>
+              <input type="text" name="username" id="username-input">
+            </div>
+
+            <div class="form-input">
+              <label for="firstname-input">First Name</label>
+              <input type="text" name="firstname" id="firstname-input">
+            </div>
+
+            <div class="form-input">
+              <label for="lastname-input">Last Name</label>
+              <input type="text" name="lastname" id="lastname-input">
+            </div>
+
+            <div class="form-submit">
+                <input type="submit" value="Register">
+            </div>
+          </form>
+      </div>
+      
+      <div id="recent-users">
+        <h2>Recent Active Users</h2>
+
+        <p>Click on a username to review each user's observations.</p>
+
+        <ul id="recent-user-list">
+          <li class="user"><a href="#">Bob Bobalooba</a></li>
+          <li class="user"><a href="#">Mary Contrary</a></li>
+          <li class="user"><a href="#">James Bean</a></li>
+          <li class="user"><a href="#">Jim Jimbulator</a></li>
+          <li class="user"><a href="#">Axle Mandible</a></li>
+          <li class="user"><a href="#">Baz Barfoo</a></li>
+        </ul>
+      </div>
+
+      <div id="frequent-trees">
+        <h2>Most Frequent Observations</h2>
+
+        <ul id="frequent-tree-list">
+          <li class="tree" id="sydney-red-gum"><a href="#">Sydney Red Gum</a></li>
+          <li class="tree" id="flowering-gum"><a href="#">Flowering Gum</a></li>
+          <li class="tree" id="lemon-scented-gum"><a href="#">Lemon Scented Gum</a></li>
+          <li class="tree" id="silky-oak"><a href="#">Silky Oak</a></li>
+          <li class="tree" id="waratah"><a href="#">Waratah</a></li>
+          <li class="tree" id="argyle-apple"><a href="#">Argyle Apple</a></li>
+          <li class="tree" id="wollemi-pine"><a href="#">Wollemi Pine</a></li>
+          <li class="tree" id="scribbly-gum"><a href="#">Scribbly Gum</a></li>
+          <li class="tree" id="bunya-pine"><a href="#">Bunya Pine</a></li>
+          <li class="tree" id="river-red-gum"><a href="#">River Red Gum</a></li>
+        </ul>
+
+        <p class="attribution">Source: <a href="https://www.gardeningwithangus.com.au/top-ten-large-australian-trees/">Gardening with Angus</a></p>
+
+      </div>
+    </div>
+
+  <footer>
+
+    <div id="social">
+      <ul>
+        <li id="social-twitter"><a href="#">Twitter</a></li>
+        <li id="social-facebook"><a href="#">Facebook</a></li>
+        <li id="social-instagram"><a href="#">Instagram</a></li>
+      </ul>
+    </div>
+
+    <ul class="footer-tos">
+      <li><a href="#">Terms</a></li>
+      <li><a href="#">Privacy</a></li>
+      <li><a href="#">Cookies</a></li>
+    </ul>
+    
+    <p id="copyright">All content and images subject to copyright &copy; COMP2110 Citizen Science 2020.</p>
+  </footer>
+
+  </body>
+</html>
