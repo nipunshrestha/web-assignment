@@ -45,12 +45,10 @@ I have implemented the MVC(Model View Controller)as a software design pattern.
 
 The Model.js file provides an interface to the web API and a local store of data that the application can refer to. This API generates two different events: "modelChanged" event when new data has been retrieved from the API and "observationAdded" event when a request to add a new observation returns. The Model class also sets the data and manipulates the data and stores in descending order according to the number of observation that a single user has added. This is shown by the leaderboard of the web application. The recent observations column is displayed by manipulating the observations data according to the timestamp in ascending order.
 
-The Main.js file is the controller of the software design pattern.  This JavaScript file handles the user request. According to the links that the user clicks this file manipulates the Model and triggers different different events when a request is sent to this class. When the events are generated this class calls the functions in the views.js file. 
+The Main.js file is the controller of the software design pattern. This JavaScript file handles the user request. According to the links that the user clicks this file manipulates the Model and triggers different different events when a request is sent to this class. When the events are generated this class calls the functions in the views.js file.
 
-Views.js is the User Interface of the web application. It displays the information of the citizen science thorugh manipulating HTML. The leaderbord and the Recent observations columns are generated through the handlebars template. 
-
-All the list of users and observations are also displayed by handlebar templetes. 
-
+Views.js is the User Interface of the web application. It displays the information of the citizen science through manipulating HTML. The leaderboard and the Recent observations columns are generated through the handlebars template.
+All the list of users and observations are also displayed by handlebar templates.
 
 
 
