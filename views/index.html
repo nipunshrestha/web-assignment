@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <title>Citizen Science</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0"> 
+    <link rel="stylesheet" href="/static/css/style.css" type="text/css">
+
+    <!-- Include Handlebars from a CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/handlebars@latest/dist/handlebars.js"></script>
+    <script src="/static/js/main.js" type=module defer> </script>
+    
+  </head>
+  <body>
+
+    <header>
+    
+     
+      <nav id = navid>
+        <div id="logo">
+          <img src="/static/css/Untitled-2.png"id="logoimg" alt="">
+        </div>
+        
+          <ul>
+              <li id="Home"><a href="#">Home</a></li>
+              <li id="Users"><a href="#!/users">Users</a></li>
+              <li id="Observations"><a href="#!/observations">Observations</a></li>
+              <li id="Submit"><a href="#!/submit">Submit an observation</a></li>
+          </ul>
+      </nav>
+    </header>
+
+    <div id="content">
+
+      <div id="heading">
+          
+          <hgroup>
+              <h1>Citizen Science</h1>
+          </hgroup>
+          <div id= "target"></div>  
+         
+      </div>
+
+      <div id = "container"> 
+        <div id = "userlist"></div>
+        <div id = "current"></div>   
+      </div>
+    </div>
+
+  <footer>
+
+    <div id="social">
+      <ul>
+        <li id="social-twitter"><a href="#">Twitter</a></li>
+        <li id="social-facebook"><a href="#">Facebook</a></li>
+        <li id="social-instagram"><a href="#">Instagram</a></li>
+      </ul>
+    </div>
+
+    <ul class="footer-tos">
+      <li><a href="#">Terms</a></li>
+      <li><a href="#">Privacy</a></li>
+      <li><a href="#">Cookies</a></li>
+    </ul>
+    
+    <p id="copyright">All content and images subject to copyright &copy; COMP2110 Citizen Science 2020.</p>
+  </footer>
+
+
+  <!-- Templates -->
+  <script id="recent-observation-list-template" type="text/x-handlebars-template">
+    <h2 id ="header_observation">Recent Observations</h2>
+    <ul id=listobservation>
+      {{#each observations}}
+        <li><a href="/#!/observations/{{id}}">{{location}} | {{temperature}}° | {{weather}} </a> </li> 
+      {{/each}}
+    </ul>
+  </script>
+
+  <script id="users-list-template" type="text/x-handlebars-template">
+    <h2 id ="header_user">LeaderBoard</h2>
+    <table>
+      {{#each users}}
+      <tr>     
+          <td><img id="useravatar" src="{{avatar}}" alt="{{id}}"></td>
+          <td><a href="/#!/users/{{id}}">{{first_name}} {{last_name}}</a></td>
+      </tr>
+      {{/each}}
+    </table>
+   
+  </script>
+
+  <script id="single-observation-template" type="text/x-handlebars-template">
+    <ul>
+        <li>Time: {{timestamp}}</li>
+        <li>Location: {{location}} </li> 
+        <li>Temperature : {{temperature}}</li>
+        <li>Weather: {{weather}}</li>
+        <li>Location: {{location}}</li>
+        <li>Tree Height: {{height}}</li>
+        <li>Tree Girth At Base: {{girth}}</li>
+        <li>Leaf Size: {{leaf_size}}</li>
+        <li>Leaf Shape: {{leaf_shape}}</li>
+        <li>Bark Colour: {{bark_colour}}</li>
+        <li>Bark Texture: {{bark_texture}}</li>
+    </ul>
+  </script>
+ 
+  <script id="single-users-template" type="text/x-handlebars-template">
+  
+    <img id="singleuseravatar" src="{{avatar}}" alt="{{id}}">
+    <ul>
+      <li> Name: {{first_name}} {{last_name}}</li> 
+      <li> Email: {{email}}</li>
+    </ul>
+  </script>
+
+  
+  </body>
+</html>
